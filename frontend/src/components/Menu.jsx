@@ -10,7 +10,7 @@ import LibraryMusicOutlinedIcon from "@mui/icons-material/LibraryMusicOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
 import { Link } from "react-router-dom";
-import { darkTheme } from "../utils/Theme";
+import { darkTheme } from "../utils/theme.js";
 import { useSelector } from "react-redux";
 
 const Container = styled.div`
