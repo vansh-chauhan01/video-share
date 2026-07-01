@@ -4,10 +4,9 @@ import Card from "../components/Card";
 import axios from "axios";
 import { useSelector } from "react-redux";
 const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 20px;
-  justify-content: flex-start;
 `;
 
 const Home = ({ type }) => {
