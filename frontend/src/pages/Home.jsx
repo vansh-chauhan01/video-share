@@ -5,8 +5,9 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 const Container = styled.div`
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
 `;
 
 const Home = ({ type }) => {
