@@ -2,9 +2,9 @@ import Menu from './components/Menu';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Video from './pages/Video';
-import { lightTheme } from './utils/Theme';
+import { lightTheme } from './utils/theme.js';
 import { useState } from 'react';
-import { darkTheme } from './utils/Theme';
+import { darkTheme } from './utils/theme.js';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import styled, { ThemeProvider } from 'styled-components';
