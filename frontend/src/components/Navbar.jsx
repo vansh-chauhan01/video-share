@@ -80,6 +80,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [q, setQ] = useState("");
   const { currentUser } = useSelector((state) => state.user);
+  console.log(currentUser);
   return (
     <>
       <Container>
@@ -100,7 +101,10 @@ const Navbar = () => {
           {currentUser ? (
             <User>
               <VideoCallOutlinedIcon onClick={() => setOpen(true)} />
-              <Avatar src={currentUser.img} />
+              <Avatar
+  src={currentUser.img}
+  referrerPolicy="no-referrer"
+/>
               {currentUser.name}
             </User>
           ) : (

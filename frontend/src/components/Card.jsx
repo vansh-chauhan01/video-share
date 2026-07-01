@@ -81,6 +81,7 @@ const Card = ({ type, video }) => {
           <ChannelImage
             type={type}
             src={channel.img}
+             referrerPolicy="no-referrer"
           />
           <Texts>
             <Title>{video.title}</Title>

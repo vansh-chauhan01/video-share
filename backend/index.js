@@ -6,12 +6,19 @@ import videoRoute from "./routes/videos.js";
 import commentRoute from "./routes/comments.js";
 import authRoute from "./routes/auth.js";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 
 
 dotenv.config();
 
 const app = express();
 app.use(cookieParser());
+
+app.use(cors({
+    origin: process.env.CLIENT_URL,
+    credentials: true,
+  })
+);
 
 const connect = async() =>{
     await mongoose.connect(process.env.MONGO).then(()=>{
@@ -38,8 +45,9 @@ app.use((err , req , res , next) =>{
     return res.status(err.status).json(err.message);
 });
 
+const PORT = process.env.PORT || 8800;
 
-app.listen(8800 , async()=>{
+app.listen(PORT, async()=>{
     await connect();
-    console.log("server connected at port 8800");
+    console.log(`server connected at port ${PORT}`);
 });
